@@ -95,4 +95,16 @@ pluginKeys.nvimTreeList = {
 	{ key = "p", action = "paste" },
 	{ key = "s", action = "system_open" },
 }
+-- Telescope
+-- 查找文件
+map ("n", "<C-t>", ":Telescope find_files<CR>", opt);
+map ("n", "<C-g>", ":Telescope live_grep<CR>", opt);
+-- Telescope 中的按键
+pluginKeys.telescopeList = {
+	n = {
+		["i"] = "move_selection_previous",
+		["k"] = "move_selection_next",
+	},
+}
+
 return pluginKeys
